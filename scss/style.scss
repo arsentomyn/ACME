@@ -1,0 +1,775 @@
+@import 'zero.scss';
+@import 'variable.scss';
+
+body {
+    font-family: "Sen", sans-serif;
+}
+section {
+    padding: 65px 0;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.page {
+    flex: 1 0 auto;
+}
+[class*="container"] {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.button {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 25px;
+    border-radius: 10px;
+    line-height: 1.5;
+
+    &-light {
+        background: $w;
+        color: $p1;
+
+        &:hover {
+            background: $s1;
+            color: $w;
+        }
+    }
+    &-dark {
+        background: $p1;
+        color: $w;
+        &:hover {
+            background: $s1;
+        }
+    }
+    &-dark-outline {
+        background: none;
+        color: $w;
+        border: 1px solid #FFF;
+        &:hover {
+            background: $w;
+            color: $p1;
+        }
+    }
+    &-prime{
+        background: $s1;
+        color: $w;
+        &:hover {
+            background: $p1;
+            color: $w;
+        }
+    }
+}
+.box-laybel {
+    position: relative ;
+    background: rgb(34,34,34);
+    background: linear-gradient(0deg, rgba(34,34,34,0.9150253851540616) 4%, rgba(255,255,255,0) 100%);
+    &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        background: url('../img/nathan-dumlao.jpg') no-repeat center center/cover;
+    }
+    &__body {
+        height: 70vh;
+        max-height: 550px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+    &__title {
+        & h2 {
+            font-weight: 700;
+            color:$w;
+        }
+
+        margin: 20px 0 10px;
+    }
+    &__subtitle {
+        & h3 {
+            color: $w;
+        }
+
+        margin: 0 0 25px;
+    }
+    &__button {}
+}
+.banner {
+    text-align: center;
+    padding: 20px 0;
+    background: $p1;
+    font-size: clamp(0.75rem, 0.661rem + 0.45vw, 0.875rem);
+    &__body {
+        color: $w;
+        & span:first-child {
+            background: $s1;
+            margin: 0 10px 0 0;
+            padding: 5px clamp(0.625rem, -0.486rem + 2.31vw, 1.25rem);
+            border-radius: 20px;
+        }
+    }
+}
+.box-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 40px;
+    &__title{
+        width: 47%;
+        & h4 {
+            font-size: 16px;
+            margin: 0 0 10px;
+        }
+        & h2 {
+            font-weight: 700;
+            font-size: 40px;
+        }
+    }
+    &__subtitle {
+        width: 47%;
+        margin: 0 0 10px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+.products {
+    &__body {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__produc {
+        width: 32.5%;
+    }
+    &__img {
+        position: relative;
+
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 5px;
+        margin: 0 0 20px;
+        .sale &::after{
+            content: "Sale";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px 25px;
+            line-height: 1.5;
+            background: $s1;
+            color: $w;
+        }
+        & img {
+            height: 100%;
+            width: auto;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__name {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+    &__cost {
+        margin: 10px 0 20px;
+        & span {
+            display: inline-block;
+            margin: 0 0 0 10px;
+            color: $s1;
+            text-decoration: line-through;
+        }
+    }
+    &__link {
+        & a {
+
+        }
+    }
+}
+
+
+
+
+.header {
+    background: $s1;
+    padding: 20px;
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {}
+    &__navigation {
+        display: flex;
+        align-items: center;
+    }
+    &__nav {
+        display: flex;
+        &-item {
+            margin: 0 clamp(0.625rem, -0.486rem + 2.31vw, 1.25rem);
+            padding: 4px 10px;
+            border-radius: 5px;
+            & a {
+                color: $w;
+                font-size: 16px;
+                font-weight: 400;
+            }
+            &:hover {
+                background: $p1;
+            }
+        }
+    }
+    &__buttons {}
+    &__cart {
+        position: relative;
+        & button {
+            padding: 6px 15px;
+            border-radius: 5px;
+            background: $p1;
+        }
+        & button img {
+            max-width: 20px;
+        }
+    }
+    &__cart-quality {
+        height: 23px;
+        width: 23px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+
+        background: $w;
+        border-radius: 50% ;
+    }
+}
+.shop-merch  {
+    &::after{
+        content: "";
+        background: url('../img/hero.jpg') no-repeat center center/cover;
+    }
+    &__container {}
+    &__body {}
+    &__title {
+        & h2 {
+            font-size: 62px;
+            width: 55%;
+        }
+    }
+    &__subtitle {
+        & h3 {
+            width: 45%;
+            font-size: 18px;
+        }
+    }
+    &__button {}
+}
+.way-to-support {
+    // padding: 65px 0;
+    &__container {}
+    &__body {}
+    &__header {}
+    &__header-title {}
+    &__header-subtitle {}
+    &__colums {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__colum {
+        width: 30%;
+    }
+    &__colum-card {
+        height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        background: $p1;
+        color: $w;
+        margin: 0 0 45px;
+
+        position: relative;
+
+        font-size: 40px;
+
+        & h2 , & h4 {
+            font-weight: 700;
+        }
+        & h2 {
+            max-width: 60%;
+            text-align: center;
+            line-height: 1.2;
+        }
+        & h4 {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+        }
+    }
+    &__colum-subtitle {
+        margin: 0 0 10px;
+        color: $p1;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    &__circle {
+        position: absolute;
+        bottom: -25%;
+        right: -25%;  
+    }
+    &__triangle {
+        position: absolute;
+        bottom: -17%;
+        right: -11%;  
+    }
+    &__rectangle {
+        position: absolute;
+        bottom: -31%;
+        right: -14%;  
+    }
+}
+.our-statement {
+    &.box-laybel::after {
+        content : '';
+        background: url('../img/nathan-dumlao.jpg') no-repeat center center/cover;
+    }
+    &__container {}
+    &__body {
+        display: flex;
+        align-items: end;
+        text-align: right;
+    }
+    &__title {
+        width: 40%;
+        & h2 {
+            font-size: clamp(2.188rem, -0.035rem + 4.63vw, 3.438rem);
+        }
+    }
+    &__subtitle {
+        width: 40%;
+        & h3 {
+            font-size: clamp(0.875rem, 0.097rem + 1.62vw, 1.313rem);
+        }
+    }
+    &__button {}
+}
+.shop-products {
+    // padding: 65px 0;
+    &__container {}
+    &__body {}
+    &__header {}
+    &__header-title {}
+    &__all-products {
+        text-align: center;
+        margin: 70px 0 10px;
+    }
+}
+.shop-local {
+    &__body {
+        display: flex;
+        justify-content: end;
+        position: relative;
+    }
+    &__left {
+        width: 30%;
+        position: absolute;
+        top: 6%;
+        left: 0;
+    }
+    &__img {
+        position: relative;
+        height: 440px;
+        overflow: hidden;
+        border-radius: 5px;
+
+        & img {
+            height: 100%;
+
+            width: auto;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__right {
+        width: 80%;
+        padding: 45px;
+        background: $p1;
+        display: flex;
+        justify-content: end;
+    }
+    &__text {
+        padding: 0 145px;
+        color: $w;
+        width: 80%;
+    }
+    &__title {
+        margin: 0 0 10px;
+        & h2 {
+            font-size: 45px;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+    }
+    &__subtitle {
+        & p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0 0 10px;
+        }
+        & span {
+            font-weight: 700;
+        }
+    }
+}
+.footer {
+    background: $p1;
+    padding: 65px 0 20px;
+    &__body {
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 50px;
+    }
+    &__logo {
+    }
+    &__messangers {
+        display: flex;
+        justify-content: space-between;
+        & img {
+            width: 30px;
+            &:nth-child(2) {
+                margin: 0 10px 0;
+            }
+        }
+    }
+    &__bottom {
+        color: $w;
+        text-align: center;
+    }
+}
+
+
+
+
+// компютери
+@media (max-width:1200px) {
+    [class*="container"] {
+        max-width: 970px;
+    }
+    .products {
+        &__body {}
+        &__produc {}
+        &__img {
+            // height: 400px;
+        }
+        &__data {}
+        &__name {}
+        &__cost {}
+        &__link {}
+    }
+    .shop-local {
+        &__container {}
+        &__body {
+            // padding: 45px 0;
+        }
+        &__img {
+            // width: 40%;
+        }
+        &__text {
+            padding: 0 40px;
+            // width: 60%;
+        }
+        // &__title {
+        //     & h2 {
+        //         font-size: 30px;
+        //     }
+        // }
+        // &__subtitle {
+        //     & p {
+        //         font-size: 14px;
+        //     }
+        // }
+    }
+}
+// планшети
+@media (max-width:992px) {
+    [class*="container"] {
+        max-width: 750px;
+    }
+    .button-dark-outline {
+    }
+    .shop-merch {
+        &__container {}
+		&__body {}
+		&__title {
+            & h2 {
+                width: 60%;
+                font-size: 49px;
+            }
+        }
+        &__subtitle {
+            & h3 {
+            }
+        }
+    }
+    .our-statement {
+        &__title {
+            width: 60%;
+        }
+        &__subtitle {
+            width: 60%;
+        }
+    }
+    .way-to-support {
+        &__colum {
+            width: 30%;
+        }
+        &__colum-card {
+    
+            font-size: 30px;
+            & h2 {
+                max-width: 90%;
+            }
+        }
+        
+    }
+    .shop-products {
+		&__container {}
+		&__body {}
+		&__header {}
+		&__header-title {}
+		&__all-products {
+            margin: 50px 0 0;
+        }
+		&__button {}
+    }
+    .products {
+            &__body {}
+            &__produc {}
+            &__img {
+                // height: 300px;
+            }
+            &__data {}
+            &__name {}
+            &__cost {}
+            &__link {}
+    }
+    .shop-local {
+        &__img {
+            height: 400px;
+        }
+        &__text {
+            padding: 0 0 0 50px;
+            width: 100%;
+        }
+    }
+}
+// телефони
+@media (max-width:767px) {
+    [class*="container"] {
+        max-width: none;
+    }
+    .box-header {
+        flex-direction: column;
+        &__title{
+            width: 100%;
+            & h2 {
+                margin: 0px 0 20px;
+            }
+        }
+        &__subtitle {
+            width: 100%;
+        }
+    }
+    section {
+        &.shop-local {
+            padding: 65px 0 0;
+        }
+    }
+
+    .header {
+        padding: 20px 0;
+		&__container {}
+		&__body {}
+		&__logo {}
+		&__navigation {}
+		&__nav {
+            display: none;
+        }
+		&__nav-item {}
+		&__buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+		&__cart {}
+		&__cart-quality {}
+        &__burger {
+            margin: 0 0 0 20px;
+            & span {
+                display: block;
+                width: 33px;
+                height: 4px;
+                border-radius: 10px ;
+                background: $w;
+
+                &:nth-child(2) {
+                    margin: 5px 0;
+                }
+            }
+        }
+    }
+    .shop-merch {
+		&__container {}
+		&__body {
+            justify-content: end;
+            padding: 0 0 45px;
+        }
+		&__title {
+            & h2 {
+                font-size: 30px;
+                width: 100%;
+                max-width: 550px;
+            }
+        }
+        &__subtitle {
+            & h3 {
+                width: 100%;
+                max-width: 550px;
+            }
+        }
+    }
+    .footer {
+        background: $p1;
+        padding: 45px 0 15px;
+        &__body {
+        }
+        &__top {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            // margin: 0 0 50px;
+        }
+        &__logo {
+            margin: 0 0 40px;
+        }
+        &__messangers {
+            display: flex;
+            justify-content: space-between;
+            & img {
+                width: 30px;
+                &:nth-child(2) {
+                    margin: 0 50px 0;
+                }
+            }
+        }
+    }
+    .our-statement {
+        &__title {
+            width: 100%;
+            max-width: 550px;
+        }
+        &__subtitle {
+            width: 100%;
+            max-width: 550px;
+        }
+    }
+    .way-to-support {
+        &__colums {
+            flex-direction: column;
+        }
+        &__colum {
+            width: 100%;
+        }
+        &__colum-card {
+            height: 320px;
+            font-size: 40px;
+            margin: 0 0 25px;
+        }
+        &__colum-subtitle {
+            margin: 0 0 40px;
+            color: $p1;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        &__circle {
+            position: absolute;
+            bottom: -25%;
+            right: -25%;  
+        }
+        &__triangle {
+            position: absolute;
+            bottom: -17%;
+            right: -11%;  
+        }
+        &__rectangle {
+            position: absolute;
+            bottom: -31%;
+            right: -14%;  
+        }
+    }
+    .products {
+        &__body {
+            flex-direction: column;
+        }
+        &__produc {
+            width: 100%;
+            margin: 0 0 20px;
+        }
+        &__img {
+            // height: ;
+        }
+        &__data {}
+        &__name {}
+        &__cost {}
+        &__link {}
+    }
+    .shop-local {
+        &__container {
+            padding: 0;
+        }
+        &__body {
+            flex-direction: column;
+        }
+        &__right {
+            width: 100%;
+        }
+        &__left {
+            width: 100%;
+            position: static;
+        }
+        &__img {
+            
+            height: auto;
+            border-radius: 0;
+            & img {
+                position: relative;
+                height: auto;
+                width: 100%;
+            }
+        }
+        &__text {
+            padding: 0 0 0 50px;
+            width: 100%;
+        }
+    }
+}

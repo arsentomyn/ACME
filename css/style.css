@@ -1,0 +1,685 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+.bigred {
+  font-size: 20px;
+  color: red;
+}
+
+body {
+  font-family: "Sen", sans-serif;
+}
+
+section {
+  padding: 65px 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.page {
+  flex: 1 0 auto;
+}
+
+[class*=container] {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.button {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 25px;
+  border-radius: 10px;
+  line-height: 1.5;
+}
+.button-light {
+  background: #F9F9F9;
+  color: #222222;
+}
+.button-light:hover {
+  background: #eb5757;
+  color: #F9F9F9;
+}
+.button-dark {
+  background: #222222;
+  color: #F9F9F9;
+}
+.button-dark:hover {
+  background: #eb5757;
+}
+.button-dark-outline {
+  background: none;
+  color: #F9F9F9;
+  border: 1px solid #FFF;
+}
+.button-dark-outline:hover {
+  background: #F9F9F9;
+  color: #222222;
+}
+.button-prime {
+  background: #eb5757;
+  color: #F9F9F9;
+}
+.button-prime:hover {
+  background: #222222;
+  color: #F9F9F9;
+}
+
+.box-laybel {
+  position: relative;
+  background: rgb(34, 34, 34);
+  background: linear-gradient(0deg, rgba(34, 34, 34, 0.9150253852) 4%, rgba(255, 255, 255, 0) 100%);
+}
+.box-laybel::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: url("../img/nathan-dumlao.jpg") no-repeat center center/cover;
+}
+.box-laybel__body {
+  height: 70vh;
+  max-height: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.box-laybel__title {
+  margin: 20px 0 10px;
+}
+.box-laybel__title h2 {
+  font-weight: 700;
+  color: #F9F9F9;
+}
+.box-laybel__subtitle {
+  margin: 0 0 25px;
+}
+.box-laybel__subtitle h3 {
+  color: #F9F9F9;
+}
+.banner {
+  text-align: center;
+  padding: 20px 0;
+  background: #222222;
+  font-size: clamp(0.75rem, 0.661rem + 0.45vw, 0.875rem);
+}
+.banner__body {
+  color: #F9F9F9;
+}
+.banner__body span:first-child {
+  background: #eb5757;
+  margin: 0 10px 0 0;
+  padding: 5px clamp(0.625rem, -0.486rem + 2.31vw, 1.25rem);
+  border-radius: 20px;
+}
+
+.box-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 40px;
+}
+.box-header__title {
+  width: 47%;
+}
+.box-header__title h4 {
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+.box-header__title h2 {
+  font-weight: 700;
+  font-size: 40px;
+}
+.box-header__subtitle {
+  width: 47%;
+  margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.products__body {
+  display: flex;
+  justify-content: space-between;
+}
+.products__produc {
+  width: 32.5%;
+}
+.products__img {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+  margin: 0 0 20px;
+}
+.sale .products__img::after {
+  content: "Sale";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 25px;
+  line-height: 1.5;
+  background: #eb5757;
+  color: #F9F9F9;
+}
+.products__img img {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.products__data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.products__name {
+  font-size: 20px;
+  line-height: 1.5;
+}
+.products__cost {
+  margin: 10px 0 20px;
+}
+.products__cost span {
+  display: inline-block;
+  margin: 0 0 0 10px;
+  color: #eb5757;
+  text-decoration: line-through;
+}
+.header {
+  background: #eb5757;
+  padding: 20px;
+}
+.header__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__navigation {
+  display: flex;
+  align-items: center;
+}
+.header__nav {
+  display: flex;
+}
+.header__nav-item {
+  margin: 0 clamp(0.625rem, -0.486rem + 2.31vw, 1.25rem);
+  padding: 4px 10px;
+  border-radius: 5px;
+}
+.header__nav-item a {
+  color: #F9F9F9;
+  font-size: 16px;
+  font-weight: 400;
+}
+.header__nav-item:hover {
+  background: #222222;
+}
+.header__cart {
+  position: relative;
+}
+.header__cart button {
+  padding: 6px 15px;
+  border-radius: 5px;
+  background: #222222;
+}
+.header__cart button img {
+  max-width: 20px;
+}
+.header__cart-quality {
+  height: 23px;
+  width: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #F9F9F9;
+  border-radius: 50%;
+}
+
+.shop-merch::after {
+  content: "";
+  background: url("../img/hero.jpg") no-repeat center center/cover;
+}
+.shop-merch__title h2 {
+  font-size: 62px;
+  width: 55%;
+}
+.shop-merch__subtitle h3 {
+  width: 45%;
+  font-size: 18px;
+}
+.way-to-support__colums {
+  display: flex;
+  justify-content: space-between;
+}
+.way-to-support__colum {
+  width: 30%;
+}
+.way-to-support__colum-card {
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #222222;
+  color: #F9F9F9;
+  margin: 0 0 45px;
+  position: relative;
+  font-size: 40px;
+}
+.way-to-support__colum-card h2, .way-to-support__colum-card h4 {
+  font-weight: 700;
+}
+.way-to-support__colum-card h2 {
+  max-width: 60%;
+  text-align: center;
+  line-height: 1.2;
+}
+.way-to-support__colum-card h4 {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+.way-to-support__colum-subtitle {
+  margin: 0 0 10px;
+  color: #222222;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.way-to-support__circle {
+  position: absolute;
+  bottom: -25%;
+  right: -25%;
+}
+.way-to-support__triangle {
+  position: absolute;
+  bottom: -17%;
+  right: -11%;
+}
+.way-to-support__rectangle {
+  position: absolute;
+  bottom: -31%;
+  right: -14%;
+}
+
+.our-statement.box-laybel::after {
+  content: "";
+  background: url("../img/nathan-dumlao.jpg") no-repeat center center/cover;
+}
+.our-statement__body {
+  display: flex;
+  align-items: end;
+  text-align: right;
+}
+.our-statement__title {
+  width: 40%;
+}
+.our-statement__title h2 {
+  font-size: clamp(2.188rem, -0.035rem + 4.63vw, 3.438rem);
+}
+.our-statement__subtitle {
+  width: 40%;
+}
+.our-statement__subtitle h3 {
+  font-size: clamp(0.875rem, 0.097rem + 1.62vw, 1.313rem);
+}
+.shop-products__all-products {
+  text-align: center;
+  margin: 70px 0 10px;
+}
+
+.shop-local__body {
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+.shop-local__left {
+  width: 30%;
+  position: absolute;
+  top: 6%;
+  left: 0;
+}
+.shop-local__img {
+  position: relative;
+  height: 440px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.shop-local__img img {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.shop-local__right {
+  width: 80%;
+  padding: 45px;
+  background: #222222;
+  display: flex;
+  justify-content: end;
+}
+.shop-local__text {
+  padding: 0 145px;
+  color: #F9F9F9;
+  width: 80%;
+}
+.shop-local__title {
+  margin: 0 0 10px;
+}
+.shop-local__title h2 {
+  font-size: 45px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.shop-local__subtitle p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+.shop-local__subtitle span {
+  font-weight: 700;
+}
+
+.footer {
+  background: #222222;
+  padding: 65px 0 20px;
+}
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 50px;
+}
+.footer__messangers {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__messangers img {
+  width: 30px;
+}
+.footer__messangers img:nth-child(2) {
+  margin: 0 10px 0;
+}
+.footer__bottom {
+  color: #F9F9F9;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  [class*=container] {
+    max-width: 970px;
+  }
+  .shop-local__text {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 992px) {
+  [class*=container] {
+    max-width: 750px;
+  }
+  .shop-merch__title h2 {
+    width: 60%;
+    font-size: 49px;
+  }
+  .our-statement__title {
+    width: 60%;
+  }
+  .our-statement__subtitle {
+    width: 60%;
+  }
+  .way-to-support__colum {
+    width: 30%;
+  }
+  .way-to-support__colum-card {
+    font-size: 30px;
+  }
+  .way-to-support__colum-card h2 {
+    max-width: 90%;
+  }
+  .shop-products__all-products {
+    margin: 50px 0 0;
+  }
+  .shop-local__img {
+    height: 400px;
+  }
+  .shop-local__text {
+    padding: 0 0 0 50px;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  [class*=container] {
+    max-width: none;
+  }
+  .box-header {
+    flex-direction: column;
+  }
+  .box-header__title {
+    width: 100%;
+  }
+  .box-header__title h2 {
+    margin: 0px 0 20px;
+  }
+  .box-header__subtitle {
+    width: 100%;
+  }
+  section.shop-local {
+    padding: 65px 0 0;
+  }
+  .header {
+    padding: 20px 0;
+  }
+  .header__nav {
+    display: none;
+  }
+  .header__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__burger {
+    margin: 0 0 0 20px;
+  }
+  .header__burger span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    border-radius: 10px;
+    background: #F9F9F9;
+  }
+  .header__burger span:nth-child(2) {
+    margin: 5px 0;
+  }
+  .shop-merch__body {
+    justify-content: end;
+    padding: 0 0 45px;
+  }
+  .shop-merch__title h2 {
+    font-size: 30px;
+    width: 100%;
+    max-width: 550px;
+  }
+  .shop-merch__subtitle h3 {
+    width: 100%;
+    max-width: 550px;
+  }
+  .footer {
+    background: #222222;
+    padding: 45px 0 15px;
+  }
+  .footer__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__logo {
+    margin: 0 0 40px;
+  }
+  .footer__messangers {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__messangers img {
+    width: 30px;
+  }
+  .footer__messangers img:nth-child(2) {
+    margin: 0 50px 0;
+  }
+  .our-statement__title {
+    width: 100%;
+    max-width: 550px;
+  }
+  .our-statement__subtitle {
+    width: 100%;
+    max-width: 550px;
+  }
+  .way-to-support__colums {
+    flex-direction: column;
+  }
+  .way-to-support__colum {
+    width: 100%;
+  }
+  .way-to-support__colum-card {
+    height: 320px;
+    font-size: 40px;
+    margin: 0 0 25px;
+  }
+  .way-to-support__colum-subtitle {
+    margin: 0 0 40px;
+    color: #222222;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .way-to-support__circle {
+    position: absolute;
+    bottom: -25%;
+    right: -25%;
+  }
+  .way-to-support__triangle {
+    position: absolute;
+    bottom: -17%;
+    right: -11%;
+  }
+  .way-to-support__rectangle {
+    position: absolute;
+    bottom: -31%;
+    right: -14%;
+  }
+  .products__body {
+    flex-direction: column;
+  }
+  .products__produc {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+  .shop-local__container {
+    padding: 0;
+  }
+  .shop-local__body {
+    flex-direction: column;
+  }
+  .shop-local__right {
+    width: 100%;
+  }
+  .shop-local__left {
+    width: 100%;
+    position: static;
+  }
+  .shop-local__img {
+    height: auto;
+    border-radius: 0;
+  }
+  .shop-local__img img {
+    position: relative;
+    height: auto;
+    width: 100%;
+  }
+  .shop-local__text {
+    padding: 0 0 0 50px;
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
