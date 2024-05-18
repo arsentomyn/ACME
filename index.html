@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preset</title>
+    <title>ACME</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,36 +13,36 @@
 <body>
     
     <div class="wrapper">
-        <div class="banner">
-            <div class="banner__container">
-                <div class="banner__body">
-                    <span>Announcement</span>
-                    <span>How we're responding to COVID-19</span>
+        <header class="header">
+            <div class="banner">
+                <div class="banner__container">
+                    <div class="banner__body">
+                        <span>Announcement</span>
+                        <span>How we're responding to COVID-19</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <header class="header">
             <div class="header__container">
                 <div class="header__body">
-                    <div class="header__logo">
+                    <a href="./index.html" class="header__logo">
                         <img src="./img/logo.svg" alt="LOGO">
-                    </div>
+                    </a>
                     <div class="header__navigation">
-                        <nav class="header__nav">
+                        <nav id="nav" class="header__nav">
                             <div class="header__nav-item">
-                                <a href="#">Home</a>
+                                <a href="./index.html">Home</a>
                             </div>
                             <div class="header__nav-item">
-                                <a href="#">About</a>
+                                <a href="./pages/about.html">About</a>
                             </div>
                             <div class="header__nav-item">
-                                <a href="#">Shop</a>
+                                <a href="./pages/shop.html">Shop</a>
                             </div>
                             <div class="header__nav-item">
-                                <a href="#">Donate</a>
+                                <a href="./pages/donate.html">Donate</a>
                             </div>
                             <div class="header__nav-item">
-                                <a href="#">Contact</a>
+                                <a href="./pages/contact.html">Contact</a>
                             </div>
                         </nav>
                         <div class="header__buttons">
@@ -54,7 +54,7 @@
                                     <span>3</span>
                                 </div>
                             </div>
-                            <div class="header__burger">
+                            <div id="burger" class="header__burger">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -76,7 +76,7 @@
                             <h3>Acme Outdoors is an outdoor and adventure shop located in the Boathouse District in Oklahoma City.</h3>
                         </div>
                         <div class="shop-merch__button box-laybel__button">
-                            <a href="#" class="button-dark-outline button">Shop Merch</a>
+                            <a href="./pages/shop.html" class="button-dark-outline button">Shop Merch</a>
                         </div>
                     </div>
                 </div>
@@ -111,7 +111,7 @@
                                     <img class='way-to-support__triangle' src="/img/Triangle.svg" alt="">
                                 </div>
                                 <div class="way-to-support__colum-subtitle">
-                                    <p>Our full product line is still available online here on our site! Getting outside and hiking is still something you can do. Get your gear now!</p>
+                                    <p>Since we've changed the way we operate to online only, and to ensure your safety, not all our staff is working. Donate to keep them afloat.</p>
                                 </div>
                             </div>
                             <div class="way-to-support__colum">
@@ -121,7 +121,7 @@
                                     <img class='way-to-support__rectangle' src="/img/Rectangle.svg" alt="">
                                 </div>
                                 <div class="way-to-support__colum-subtitle">
-                                    <p>Our full product line is still available online here on our site! Getting outside and hiking is still something you can do. Get your gear now!</p>
+                                    <p>Have all the outdoor gear you need for now? Buy a gift card and use it later or share it with friends and family.</p>
                                 </div>
                             </div>
                         </div>
@@ -162,7 +162,7 @@
                                         <div class="products__name">Tin Coffee Tumbler</div>
                                         <div class="products__cost">$ 200.00 USD</div>
                                         <div class="products__link">
-                                            <a class="button-prime button" href="#">Details</a>
+                                            <a class="button-prime button" href="./pages/product-page.html">Details</a>
                                         </div>
                                     </div>
                                 </div>
@@ -174,7 +174,7 @@
                                         <div class="products__name">Tin Coffee Tumbler</div>
                                         <div class="products__cost">$ 35.00 USD</div>
                                         <div class="products__link">
-                                            <a class="button-prime button" href="#">Details</a>
+                                            <a class="button-prime button" href="./pages/product-page.html">Details</a>
                                         </div>
                                     </div>
                                 </div>
@@ -186,32 +186,28 @@
                                         <div class="products__name">Tin Coffee Tumbler</div>
                                         <div class="products__cost">$ 95.00 USD   <span>$ 145.00 USD</span></div>
                                         <div class="products__link">
-                                            <a class="button-prime button" href="#">Details</a>
+                                            <a class="button-prime button" href="./pages/product-page.html">Details</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="shop-products__all-products">
-                            <a class="shop-products__button button button-dark">View All Products</a>
+                            <a href="./pages/shop.html" class="shop-products__button button button-dark">View All Products</a>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="shop-local">
-                <div class="shop-local__container">
-                    <div class="shop-local__body">
-                        <div class="shop-local__left">
-                            <div class="shop-local__img">
-                                <img src="./img/christiann-koepke.jpeg" alt="">
-                            </div>
-                        </div>
-                        <div class="shop-local__right">
-                            <div class="shop-local__text">
-                                <div class="shop-local__title">
+            <section class="shop-local img-text-box">
+                <div class="shop-local__container img-text-box__container">
+                    <div class="shop-local__body img-text-box__body">
+                        <div class="shop-local__left img-text-box__left"></div>
+                        <div class="shop-local__right img-text-box__right">
+                            <div class="shop-local__text img-text-box__text">
+                                <div class="shop-local__title img-text-box__title">
                                     <h2>Shop Local.</h2>
                                 </div>
-                                <div class="shop-local__subtitle">
+                                <div class="shop-local__subtitle img-text-box__subtitile">
                                     <p>We know that during COVID-19, a lot of folks around the city and state are feeling uneasy about the future - we’re not sure what the future holds either.</p>
                                     <p>That said: we know that we love making sure you have the gear you need for your adventures, and we’re going to keep doing that - with our team - until the city tells us we can’t.</p>
                                     <p>But as long as folks like yourself support small businesses around the city, then we’ll be here — every day, making sure your orders arrive on time.</p>

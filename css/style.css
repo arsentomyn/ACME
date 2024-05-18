@@ -156,7 +156,7 @@ section {
   background: url("../img/nathan-dumlao.jpg") no-repeat center center/cover;
 }
 .box-laybel__body {
-  height: 70vh;
+  height: 60vh;
   max-height: 550px;
   display: flex;
   flex-direction: column;
@@ -211,7 +211,7 @@ section {
 .box-header__subtitle {
   width: 47%;
   margin: 0 0 10px;
-  font-size: 16px;
+  font-size: clamp(0.938rem, 0.604rem + 0.69vw, 1.125rem);
   line-height: 1.5;
 }
 
@@ -239,6 +239,7 @@ section {
   line-height: 1.5;
   background: #eb5757;
   color: #F9F9F9;
+  border-radius: 5px;
 }
 .products__img img {
   height: 100%;
@@ -265,11 +266,55 @@ section {
   color: #eb5757;
   text-decoration: line-through;
 }
+.img-text-box__body {
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+.img-text-box__left {
+  position: absolute;
+  background: url("../img/christiann-koepke.jpeg") no-repeat 50% 50%/cover;
+  width: 45%;
+  height: 90%;
+  border-radius: 5px;
+  inset: 5% auto 0% 0%;
+  overflow: hidden;
+}
+.img-text-box__right {
+  background: #222222;
+  display: flex;
+  justify-content: end;
+}
+.img-text-box__text {
+  color: #F9F9F9;
+}
+.img-text-box__title {
+  margin: 0 0 10px;
+}
+.img-text-box__title h2 {
+  font-size: 45px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.img-text-box__subtitile p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+.img-text-box__subtitile span {
+  font-weight: 700;
+}
+
 .header {
   background: #eb5757;
-  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
 }
 .header__body {
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -319,6 +364,9 @@ section {
   border-radius: 50%;
 }
 
+.shop-merch {
+  margin: 125px 0 0;
+}
 .shop-merch::after {
   content: "";
   background: url("../img/hero.jpg") no-repeat center center/cover;
@@ -349,6 +397,7 @@ section {
   margin: 0 0 45px;
   position: relative;
   font-size: 40px;
+  border-radius: 5px;
 }
 .way-to-support__colum-card h2, .way-to-support__colum-card h4 {
   font-weight: 700;
@@ -411,59 +460,17 @@ section {
   margin: 70px 0 10px;
 }
 
-.shop-local__body {
-  display: flex;
-  justify-content: end;
-  position: relative;
-}
 .shop-local__left {
   width: 30%;
-  position: absolute;
-  top: 6%;
-  left: 0;
-}
-.shop-local__img {
-  position: relative;
-  height: 440px;
-  overflow: hidden;
-  border-radius: 5px;
-}
-.shop-local__img img {
-  height: 100%;
-  width: auto;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  background: url("../img/christiann-koepke.jpeg") no-repeat 50% 50%/cover;
 }
 .shop-local__right {
   width: 80%;
-  padding: 45px;
-  background: #222222;
-  display: flex;
-  justify-content: end;
+  padding: 45px 145px;
 }
 .shop-local__text {
-  padding: 0 145px;
-  color: #F9F9F9;
   width: 80%;
 }
-.shop-local__title {
-  margin: 0 0 10px;
-}
-.shop-local__title h2 {
-  font-size: 45px;
-  line-height: 1.2;
-  font-weight: 700;
-}
-.shop-local__subtitle p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0 0 10px;
-}
-.shop-local__subtitle span {
-  font-weight: 700;
-}
-
 .footer {
   background: #222222;
   padding: 65px 0 20px;
@@ -488,17 +495,216 @@ section {
   text-align: center;
 }
 
+.your-advature {
+  margin: 125px 0 0;
+}
+.your-advature::after {
+  content: "";
+  background: url("../img/your-advature.jpeg") no-repeat center center/cover;
+}
+.your-advature__body {
+  max-width: 500px;
+}
+.your-advature__title h2 {
+  font-size: clamp(3.75rem, 2.417rem + 2.78vw, 4.5rem);
+}
+.your-advature__subtitle h3 {
+  font-size: clamp(1.125rem, 0.681rem + 0.93vw, 1.375rem);
+}
+.our-advantage__header {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+.our-advantage__title {
+  margin: 20px 0 10px;
+}
+.our-advantage__title h2 {
+  font-weight: 700;
+  font-size: 32px;
+}
+.our-advantage__subtitle {
+  margin: 0 0 10px;
+}
+.our-advantage__subtitle h4 {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.our-advantage__colums {
+  padding: 65px 0;
+  display: flex;
+  justify-content: space-around;
+}
+.our-advantage__colum {
+  width: 22%;
+}
+.our-advantage__colum-title {
+  margin: 20px 0 10px;
+}
+.our-advantage__colum-title h2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+.our-advantage__colum-text h4 {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.meet-our-owners__left {
+  width: 45%;
+  background: url("../img/meet-our-owners.jpeg") no-repeat 50% 90%/cover;
+}
+.meet-our-owners__right {
+  width: 70%;
+  padding: 90px 50px 90px 245px;
+}
+.meet-our-owners__owners {
+  display: flex;
+  justify-content: space-around;
+  padding: 100px 0 0;
+}
+.meet-our-owners__owner {
+  width: 35%;
+  text-align: center;
+}
+.meet-our-owners__owner-img img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.meet-our-owners__owner-name {
+  margin: 20px 0 10px;
+}
+.meet-our-owners__owner-name h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222222;
+}
+.meet-our-owners__owner-story {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.need-help::after {
+  content: "";
+  background: url("../img/need-help.jpeg") no-repeat center center/cover;
+}
+.need-help__body {
+  max-width: 450px;
+}
+.need-help__title h2 {
+  font-size: clamp(3.75rem, 2.417rem + 2.78vw, 4.5rem);
+}
+.need-help__subtitle h3 {
+  font-size: clamp(1.125rem, 0.681rem + 0.93vw, 1.375rem);
+}
 @media (max-width: 1200px) {
   [class*=container] {
-    max-width: 970px;
+    max-width: none;
   }
   .shop-local__text {
     padding: 0 40px;
   }
+  .way-to-support__colum {
+    width: 30%;
+  }
+  .way-to-support__colum-card {
+    font-size: 30px;
+  }
+  .way-to-support__colum-card h2 {
+    max-width: 70%;
+  }
 }
 @media (max-width: 992px) {
   [class*=container] {
-    max-width: 750px;
+    max-width: none;
+  }
+  .products__body {
+    flex-wrap: wrap;
+  }
+  .products__produc {
+    width: 49%;
+    margin: 0 0 70px;
+  }
+  .products__produc:last-child {
+    margin: 0;
+  }
+  .products__img {
+    max-height: 300px;
+  }
+  .header__nav {
+    width: 80%;
+    max-width: 400px;
+    position: fixed;
+    top: 120px;
+    bottom: 0;
+    right: 0;
+    background: #eb5757;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    transition: transform 0.3s;
+    transform: translateX(100%);
+  }
+  .header__nav.active {
+    transform: translateX(0%);
+  }
+  .header__nav-item {
+    margin: 0 0 15px;
+  }
+  .header__nav-item:first-child {
+    margin: 35px 0 15px;
+  }
+  .header__nav-item a {
+    display: inline-block;
+    font-size: 25px;
+  }
+  .header__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__burger {
+    margin: 0 0 0 20px;
+    background: none;
+    position: relative;
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    border: none;
+  }
+  .header__burger:hover, .header__burger:active {
+    background: none;
+  }
+  .header__burger span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    border-radius: 10px;
+    background: #F9F9F9;
+    transition: transform 0.3s, opacity 0.3s;
+    position: absolute;
+    left: 0;
+  }
+  .header__burger span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .header__burger span:first-child {
+    top: 4px;
+  }
+  .header__burger span:last-child {
+    bottom: 4px;
+  }
+  .header__burger.active span:first-child {
+    transform: translateY(10.5px) rotate(45deg);
+  }
+  .header__burger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .header__burger.active span:last-child {
+    transform: translateY(-10.5px) rotate(-45deg);
   }
   .shop-merch__title h2 {
     width: 60%;
@@ -510,15 +716,6 @@ section {
   .our-statement__subtitle {
     width: 60%;
   }
-  .way-to-support__colum {
-    width: 30%;
-  }
-  .way-to-support__colum-card {
-    font-size: 30px;
-  }
-  .way-to-support__colum-card h2 {
-    max-width: 90%;
-  }
   .shop-products__all-products {
     margin: 50px 0 0;
   }
@@ -528,6 +725,16 @@ section {
   .shop-local__text {
     padding: 0 0 0 50px;
     width: 100%;
+  }
+  .our-advantage__header {
+    width: 80%;
+  }
+  .our-advantage__colums {
+    flex-wrap: wrap;
+    padding: 35px 0;
+  }
+  .our-advantage__colum {
+    min-width: 250px;
   }
 }
 @media (max-width: 767px) {
@@ -549,36 +756,29 @@ section {
   section.shop-local {
     padding: 65px 0 0;
   }
-  .header {
-    padding: 20px 0;
+  .box-laybel__body {
+    justify-content: end;
+  }
+  .button {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 25px;
+    border-radius: 10px;
+    line-height: 1.5;
+  }
+  .header__body {
+    padding: 25px 0;
   }
   .header__nav {
-    display: none;
-  }
-  .header__buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .header__burger {
-    margin: 0 0 0 20px;
-  }
-  .header__burger span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    border-radius: 10px;
-    background: #F9F9F9;
-  }
-  .header__burger span:nth-child(2) {
-    margin: 5px 0;
+    width: 100%;
+    max-width: none;
   }
   .shop-merch__body {
     justify-content: end;
     padding: 0 0 45px;
   }
   .shop-merch__title h2 {
-    font-size: 30px;
     width: 100%;
     max-width: 550px;
   }
@@ -656,30 +856,68 @@ section {
     width: 100%;
     margin: 0 0 20px;
   }
-  .shop-local__container {
+  .products__img {
+    max-height: none;
+  }
+  .img-text-box__container {
     padding: 0;
   }
-  .shop-local__body {
+  .img-text-box__body {
     flex-direction: column;
   }
-  .shop-local__right {
+  .img-text-box__right {
     width: 100%;
+    padding: 50px;
   }
-  .shop-local__left {
+  .img-text-box__left {
     width: 100%;
     position: static;
+    height: 400px;
   }
-  .shop-local__img {
+  .img-text-box__img {
     height: auto;
     border-radius: 0;
   }
-  .shop-local__img img {
+  .img-text-box__img img {
     position: relative;
     height: auto;
     width: 100%;
   }
-  .shop-local__text {
-    padding: 0 0 0 50px;
+  .img-text-box__text {
     width: 100%;
+  }
+  .meet-our-owners__owners {
+    flex-direction: column;
+  }
+  .meet-our-owners__owner {
+    width: 100%;
+  }
+  .meet-our-owners__owner:last-child {
+    margin: 70px 0 0;
+  }
+  .our-advantage__header {
+    width: 100%;
+  }
+  .our-advantage__colums {
+    flex-wrap: wrap;
+  }
+  .our-advantage__colum {
+    min-width: 80%;
+    margin: 0 0 25px;
+  }
+  .our-advantage__colum:last-child {
+    margin: 0;
+  }
+}
+@media (max-width: 425px) {
+  .our-advantage__header {
+    width: 100%;
+  }
+  .our-advantage__colums {
+    flex-wrap: wrap;
+  }
+  .our-advantage__colum {
+    min-width: 100%;
+    margin: 0 0 25px;
   }
 }/*# sourceMappingURL=style.css.map */

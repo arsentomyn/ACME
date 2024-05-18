@@ -78,7 +78,7 @@ section {
         background: url('../img/nathan-dumlao.jpg') no-repeat center center/cover;
     }
     &__body {
-        height: 70vh;
+        height: 60vh;
         max-height: 550px;
         display: flex;
         flex-direction: column;
@@ -135,7 +135,7 @@ section {
     &__subtitle {
         width: 47%;
         margin: 0 0 10px;
-        font-size: 16px;
+        font-size: clamp(0.938rem, 0.604rem + 0.69vw, 1.125rem);
         line-height: 1.5;
     }
 }
@@ -164,6 +164,7 @@ section {
             line-height: 1.5;
             background: $s1;
             color: $w;
+            border-radius: 5px;
         }
         & img {
             height: 100%;
@@ -197,15 +198,65 @@ section {
         }
     }
 }
+.img-text-box {
+    &__container {}
+    &__body {
+        display: flex;
+        justify-content: end;
+        position: relative;
+    }
+    &__left {
+        position: absolute;
+        background: url('../img/christiann-koepke.jpeg') no-repeat 50% 50%/cover;
+        width: 45%;
+        height: 90%;
+        border-radius: 5px;
+        inset: 5% auto 0% 0%;
+        overflow: hidden;
+    }
+    &__img {
+    }
+    &__right {
+        background: $p1;
+        display: flex;
+        justify-content: end;
+    }
+    &__text {
+        color: $w;
+    }
+    &__title {
+        margin: 0 0 10px;
+        & h2 {
+            font-size: 45px;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+    }
+    &__subtitile {
+        & p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0 0 10px;
+        }
+        & span {
+            font-weight: 700;
+        }
+    }
+}
 
 
 
 
 .header {
     background: $s1;
-    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
 
     &__body {
+        padding: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -259,6 +310,7 @@ section {
     }
 }
 .shop-merch  {
+    margin: 125px 0 0;
     &::after{
         content: "";
         background: url('../img/hero.jpg') no-repeat center center/cover;
@@ -307,7 +359,7 @@ section {
         position: relative;
 
         font-size: 40px;
-
+        border-radius: 5px;
         & h2 , & h4 {
             font-weight: 700;
         }
@@ -381,61 +433,21 @@ section {
     }
 }
 .shop-local {
-    &__body {
-        display: flex;
-        justify-content: end;
-        position: relative;
-    }
     &__left {
         width: 30%;
-        position: absolute;
-        top: 6%;
-        left: 0;
-    }
-    &__img {
-        position: relative;
-        height: 440px;
-        overflow: hidden;
-        border-radius: 5px;
-
-        & img {
-            height: 100%;
-
-            width: auto;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+        background: url('../img/christiann-koepke.jpeg') no-repeat 50% 50%/cover;
     }
     &__right {
         width: 80%;
-        padding: 45px;
-        background: $p1;
-        display: flex;
-        justify-content: end;
+        padding: 45px 145px;
     }
     &__text {
-        padding: 0 145px;
-        color: $w;
         width: 80%;
     }
-    &__title {
-        margin: 0 0 10px;
-        & h2 {
-            font-size: 45px;
-            line-height: 1.2;
-            font-weight: 700;
-        }
-    }
+    &__title {}
     &__subtitle {
-        & p {
-            font-size: 16px;
-            line-height: 1.5;
-            margin: 0 0 10px;
-        }
-        & span {
-            font-weight: 700;
-        }
+        & p {}
+        & span {}
     }
 }
 .footer {
@@ -468,11 +480,151 @@ section {
 
 
 
+// about us
+.your-advature {
+    margin: 125px 0 0;
+    &::after{
+        content: "";
+        background: url('../img/your-advature.jpeg') no-repeat center center/cover;
+    }
+    &__container {}
+    &__body {
+        max-width: 500px;
+    }
+    &__title {
+        & h2 {
+            font-size: clamp(3.75rem, 2.417rem + 2.78vw, 4.5rem);
+        }
+    }
+    &__subtitle {
+        & h3 {
+            font-size: clamp(1.125rem, 0.681rem + 0.93vw, 1.375rem);
+        }
+    }
+    &__button {}
+}
+.our-advantage {
+    &__container {}
+    &__body {}
+
+    &__header {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &__laybel {}
+    &__title {
+        margin: 20px 0 10px;
+        & h2 {
+            font-weight: 700;
+            font-size: 32px;
+        }
+    }
+    &__subtitle {
+        margin: 0 0 10px;
+        & h4 {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    }
+
+    &__colums {
+        padding: 65px 0;
+        display: flex;
+        justify-content: space-around;
+    }
+    &__colum {
+        width: 22%;
+    }
+    &__colum-img {}
+    &__colum-title {
+        margin: 20px 0 10px;
+        & h2 {
+            font-weight: 700;
+            font-size: 24px;
+        }
+    }
+    &__colum-text {
+        & h4 {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    }
+}
+.meet-our-owners {
+    &__container {}
+    &__body {}
+    &__left {
+        width: 45%;
+        background: url('../img/meet-our-owners.jpeg') no-repeat 50% 90%/cover;
+    }
+    &__right {
+        width:70%;
+        padding: 90px 50px 90px 245px;
+    }
+    &__text {}
+    &__title {}
+    &__subtitle {}
+
+    &__owners {
+        display: flex;
+        justify-content: space-around;
+        padding: 100px 0 0;
+    }
+    &__owner {
+        width: 35%;
+        text-align: center;
+    }
+    &__owner-img {
+        & img {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+        }
+    }
+    &__owner-name {
+        margin: 20px 0 10px;
+        & h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: $p1;
+        }
+    }
+    &__owner-story {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+.need-help {
+    &::after{
+        content: "";
+        background: url('../img/need-help.jpeg') no-repeat center center/cover;
+    }
+    &__container {}
+    &__body {
+        max-width: 450px;
+    }
+    &__title {
+        & h2 {
+            font-size: clamp(3.75rem, 2.417rem + 2.78vw, 4.5rem);
+        }
+    }
+    &__subtitle {
+        & h3 {
+            font-size: clamp(1.125rem, 0.681rem + 0.93vw, 1.375rem);
+        }
+    }
+    &__button {}
+}
+
+
+
+
 
 // компютери
 @media (max-width:1200px) {
     [class*="container"] {
-        max-width: 970px;
+        max-width: none;
     }
     .products {
         &__body {}
@@ -488,33 +640,148 @@ section {
     .shop-local {
         &__container {}
         &__body {
-            // padding: 45px 0;
         }
         &__img {
-            // width: 40%;
         }
         &__text {
             padding: 0 40px;
-            // width: 60%;
         }
-        // &__title {
-        //     & h2 {
-        //         font-size: 30px;
-        //     }
-        // }
-        // &__subtitle {
-        //     & p {
-        //         font-size: 14px;
-        //     }
-        // }
+    }
+    .way-to-support {
+        &__colum {
+            width: 30%;
+        }
+        &__colum-card {
+    
+            font-size: 30px;
+            & h2 {
+                max-width: 70%;
+            }
+        }
+        
     }
 }
 // планшети
 @media (max-width:992px) {
     [class*="container"] {
-        max-width: 750px;
+        max-width: none;
     }
     .button-dark-outline {
+    }
+    .products {
+        &__body {
+            flex-wrap: wrap;
+        }
+        &__produc {
+            width: 49%;
+            margin: 0 0 70px;
+            &:last-child{
+                margin: 0;
+            }
+        }
+        &__img {
+            max-height: 300px;
+            // max-inline-size: 300px;
+        }
+        &__data {}
+        &__name {}
+        &__cost {}
+        &__link {}
+    }
+    .header {
+		&__container {}
+		&__body {}
+		&__logo {}
+		&__navigation {}
+		&__nav {
+            width: 80%;
+            max-width: 400px;
+            position: fixed;
+            top: 120px;
+            bottom: 0;
+            right: 0;
+            background: $s1;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+
+            transition: transform 0.3s;
+            transform:  translateX(100%);
+
+            &.active {
+                transform:  translateX(0%);
+            }
+        }
+		&__nav-item {
+            &:first-child {
+                margin: 35px 0 15px ;
+            }
+            & a {
+                display: inline-block;
+                font-size: 25px;
+            }
+            margin: 0 0 15px;
+        }
+		&__buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+		&__cart {}
+		&__cart-quality {}
+        
+        &__burger {
+            margin: 0 0 0 20px;
+            background: none;
+            position: relative;
+            width: 33px;
+            height: 33px;
+            cursor: pointer;
+            border: none;
+
+            &:hover,&:active {
+                background: none;
+            }
+            & span {
+                display: block;
+                width: 33px;
+                height: 4px;
+                border-radius: 10px;
+                background: $w;
+                transition: transform 0.3s, opacity 0.3s;
+                position: absolute;
+                left: 0;
+
+                &:nth-child(2) {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &:first-child {
+                    top: 4px;
+                }               
+                &:last-child {
+                    bottom: 4px;
+                }
+            }
+                
+            &.active {
+                & span {
+                    &:first-child {
+                        transform: translateY(10.5px) rotate(45deg);
+                    }
+        
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+
+                    &:last-child {
+                        transform: translateY(-10.5px) rotate(-45deg);
+                    }
+                }
+            }
+        }  
     }
     .shop-merch {
         &__container {}
@@ -538,19 +805,6 @@ section {
             width: 60%;
         }
     }
-    .way-to-support {
-        &__colum {
-            width: 30%;
-        }
-        &__colum-card {
-    
-            font-size: 30px;
-            & h2 {
-                max-width: 90%;
-            }
-        }
-        
-    }
     .shop-products {
 		&__container {}
 		&__body {}
@@ -561,17 +815,6 @@ section {
         }
 		&__button {}
     }
-    .products {
-            &__body {}
-            &__produc {}
-            &__img {
-                // height: 300px;
-            }
-            &__data {}
-            &__name {}
-            &__cost {}
-            &__link {}
-    }
     .shop-local {
         &__img {
             height: 400px;
@@ -579,6 +822,18 @@ section {
         &__text {
             padding: 0 0 0 50px;
             width: 100%;
+        }
+    }
+    .our-advantage {
+        &__header {
+            width: 80%;
+        }
+        &__colums {
+            flex-wrap: wrap;
+            padding: 35px 0;
+        }
+        &__colum {
+            min-width: 250px;
         }
     }
 }
@@ -604,39 +859,30 @@ section {
             padding: 65px 0 0;
         }
     }
-
-    .header {
-        padding: 20px 0;
-		&__container {}
-		&__body {}
-		&__logo {}
-		&__navigation {}
-		&__nav {
-            display: none;
-        }
-		&__nav-item {}
-		&__buttons {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-		&__cart {}
-		&__cart-quality {}
-        &__burger {
-            margin: 0 0 0 20px;
-            & span {
-                display: block;
-                width: 33px;
-                height: 4px;
-                border-radius: 10px ;
-                background: $w;
-
-                &:nth-child(2) {
-                    margin: 5px 0;
-                }
-            }
+    .box-laybel {
+        &__body {
+            justify-content: end;
         }
     }
+    .button {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 5px 25px;
+        border-radius: 10px;
+        line-height: 1.5;
+    }
+    .header {
+        &__body {
+            padding: 25px 0;
+        }
+        &__nav {
+            width: 100%;
+            max-width: none;
+        }
+    }
+
+    // home
     .shop-merch {
 		&__container {}
 		&__body {
@@ -645,7 +891,7 @@ section {
         }
 		&__title {
             & h2 {
-                font-size: 30px;
+                // font-size: 30px;
                 width: 100%;
                 max-width: 550px;
             }
@@ -736,14 +982,14 @@ section {
             margin: 0 0 20px;
         }
         &__img {
-            // height: ;
+            max-height: none;
         }
         &__data {}
         &__name {}
         &__cost {}
         &__link {}
     }
-    .shop-local {
+    .img-text-box {
         &__container {
             padding: 0;
         }
@@ -752,10 +998,13 @@ section {
         }
         &__right {
             width: 100%;
+            padding: 50px;
         }
         &__left {
             width: 100%;
             position: static;
+
+            height: 400px;
         }
         &__img {
             
@@ -768,8 +1017,49 @@ section {
             }
         }
         &__text {
-            padding: 0 0 0 50px;
             width: 100%;
+        }
+    }
+    // about us
+    .meet-our-owners {
+        &__owners {
+            flex-direction: column;
+        }
+        &__owner {
+            width: 100%;
+            &:last-child {
+                margin: 70px 0 0;
+            }
+        }
+    }
+    .our-advantage {
+        &__header {
+            width: 100%;
+        }
+        &__colums {
+            flex-wrap: wrap;
+        }
+        &__colum {
+            min-width: 80%;
+            margin: 0 0 25px;
+            &:last-child{
+                margin: 0;
+            }
+        }
+    }
+     // 
+}
+@media (max-width:425px) {
+    .our-advantage {
+        &__header {
+            width: 100%;
+        }
+        &__colums {
+            flex-wrap: wrap;
+        }
+        &__colum {
+            min-width: 100%;
+            margin: 0 0 25px;
         }
     }
 }
