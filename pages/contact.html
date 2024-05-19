@@ -46,7 +46,7 @@
                         </nav>
                         <div class="header__buttons">
                             <div class="header__cart">
-                                <button>
+                                <button id="cart">
                                     <img src="../img/cart.svg" alt="">
                                 </button>
                                 <div class="header__cart-quality">
@@ -64,10 +64,140 @@
             </div>
         </header>
 
-        <main class="page">
-            <section></section>
-            <section></section>
-            <section></section>
+        <main id="page" class="page">
+            <section class="contact-acme">
+                <div class="contact-acme__container">
+                    <div class="contact-acme__body">
+                        <div class="contact-acme__title">
+                            <h2>Contact Acme Outdoors</h2>
+                        </div>
+                        <div class="contact-acme__colums">
+                            <div class="contact-acme__colum">
+                                <img src="../img/chat-alt.svg" alt="">
+                                <h2>Contact Us</h2>
+                                <h4>Just want to say hi? We'd love to hear from you. We love our customers and community!</h4>
+                                <a class="button button-prime" href="">Send Us A Message</a>
+                            </div>
+                            <div class="contact-acme__colum">
+                                <img src="../img/chat-warning.svg" alt="">
+                                <h2>Get Support</h2>
+                                <h4>Have an issue with an order or with a product you purchased from us? Fill out our support form.</h4>
+                                <a class="button button-prime" href="">Contact Support</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="contact-acme__img"></div>
+                </div>
+            </section>
+            <section class="contact-acme-form">
+                <div class="contact-acme-form__container">
+                    <div class="contact-acme-form__body">
+                        <div class="contact-acme-form__contact-us">
+                            <h2 class="contact-acme-form__title">Contact Us</h2>
+                            <div class="contact-acme-form__subtitle">
+                                <p>Acme Outdoors</p> 
+                                <p>23 Rainy Street</p>
+                                <p>Oklahoma City, OK 73129</p>
+                            </div>
+                            <div class="contact-acme-form__numbers">
+                                <div class="contact-acme-form__number"><span>General Inquiries:</span> (405) 555-5555</div>
+                                <div class="contact-acme-form__number"><span>Customer Support: </span> (405) 555-5555</div>
+                            </div>
+                        </div>
+                        <div class="contact-acme-form__contact-form">
+                            <h2 class="contact-acme-form__title">Contact Form</h2>
+                            <div class="contact-acme-form__subtitle">Send us a message and we'll get back to you as soon as we can!</div>
+                            <form class="contact-acme-form__form" action="">
+                                <div class="contact-acme-form__name">
+                                    <p>Name</p>
+                                    <input placeholder="Enter your name" type="text">
+                                </div>
+                                <div class="contact-acme-form__email">
+                                    <p>Email Address</p>
+                                    <input placeholder="Enter your name" type="email">
+                                </div>
+                                <div class="contact-acme-form__text-area">
+                                    <p>Your Message</p>
+                                    <input placeholder="Enter your name" type="text">
+                                </div>
+                                <div class="contact-acme-form__button-submit">
+                                    <a href="#" class="contact-acme-form__button button button-prime">Submit</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cart-side-bar" class="cart">
+                <div class="cart__body">
+                    <div class="cart__header">
+                        <div class="cart__header-title"><span>Your Cart</span></div>
+                        <div id="cart-close" class="cart__header-close"><button>&times</button></div>
+                    </div>
+                    <div class="cart__products">
+                        <div class="cart__product">
+                            <div class="cart__product-data">
+                                <div class="cart__product-img">
+                                    <img src="../img/jakob-owens.jpeg" alt="">
+                                </div>
+                                <div class="cart__product-details">
+                                    <h3>Green Canvas Pack</h3>
+                                    <h4>$ 125.00 USD</h4>
+                                    <button>Remove</button>
+                                </div>
+                            </div>
+                            <div class="cart__quatity">
+                                <input value="1" type="number" class="cart__input">
+                            </div>
+                        </div>
+                        <div class="cart__product">
+                            <div class="cart__product-data">
+                                <div class="cart__product-img">
+                                    <img src="../img/coffee.jpeg" alt="">
+                                </div>
+                                <div class="cart__product-details">
+                                    <h3>Tin Coffee Tumbler</h3>
+                                    <h4>$ 35.00 USD</h4>
+                                    <button>Remove</button>
+                                </div>
+                            </div>
+                            <div class="cart__quatity">
+                                <input value="1" type="number" class="cart__input">
+                            </div>
+                        </div>
+                        <div class="cart__product">
+                            <div class="cart__product-data">
+                                <div class="cart__product-img">
+                                    <img src="../img/denisse-leon-.jpeg" alt="">
+                                </div>
+                                <div class="cart__product-details">
+                                    <h3>Blue Canvas Pack</h3>
+                                    <h4>$ 95.00 USD</h4>
+                                    <button>Remove</button>
+                                </div>
+                            </div>
+                            <div class="cart__quatity">
+                                <input value="1" type="number" class="cart__input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart__footer">
+                        <div class="cart__footer-top">
+                            <div class="cart__footer-title"><span>Subtotal</span></div>
+                            <div class="cart__footer-subtotal"><span>$ 675.00 USD</span></div>
+                        </div>
+                        <div class="cart__payment-methods">
+                            <div class="cart__apple-pay"><a href="#"><img src="../img/google-pay.png" alt=""></a></div>
+                            <div class="cart__google-pay"><a href="#"><img src="../img/apple-pay.png" alt=""></a></div>
+                        </div>
+                        <div class="cart__checkout">
+                            <a class="button button-prime" href="">Continue to Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <footer class="footer">

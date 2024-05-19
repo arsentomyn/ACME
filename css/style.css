@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-:focus, :active {
+button:focus, button:active {
   outline: none;
 }
 
@@ -77,6 +77,9 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: "Sen", sans-serif;
+}
+body.no-scroll {
+  overflow: hidden;
 }
 
 section {
@@ -305,13 +308,159 @@ section {
   font-weight: 700;
 }
 
+.cart {
+  position: fixed;
+  inset: 0px;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-out, visibility 0.5s;
+}
+.cart.active {
+  opacity: 1;
+  visibility: visible;
+}
+.cart__container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 35%;
+  height: 100%;
+  background: #F9F9F9;
+  z-index: 10;
+  padding: 0;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+}
+.cart__container.active {
+  transform: translateX(0%);
+}
+.cart__body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.cart__header {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  color: #222222;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cart__header-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+.cart__header-close button {
+  font-size: 40px;
+  background: none;
+  font-weight: 400;
+}
+.cart__products {
+  flex: 1 0 auto;
+  padding: 20px 30px;
+}
+.cart__product {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin: 0 0 20px;
+}
+.cart__product-data {
+  display: flex;
+}
+.cart__product-img {
+  width: 60px;
+  height: 60px;
+}
+.cart__product-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cart__product-details {
+  margin: 0 0 0 10px;
+}
+.cart__product-details h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+.cart__product-details h4 {
+  margin: 6px 0;
+  font-size: 15px;
+}
+.cart__product-details button {
+  color: #eb5757;
+  text-decoration: underline;
+  background: none;
+  font-size: 15px;
+}
+.cart__product-details button:hover {
+  text-decoration: none;
+}
+.cart__input {
+  width: 60px;
+  height: 40px;
+  border-radius: 5px;
+  padding: 0 0 0 15px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.cart__footer {
+  padding: 20px 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+.cart__footer-top {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 25px;
+  font-size: 18px;
+}
+.cart__footer-subtotal {
+  font-weight: 700;
+}
+.cart__payment-methods {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.cart__payment-methods a {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 100%;
+  margin: 0 0 10px;
+  padding: 0px 20px;
+  background: #F9F9F9;
+  color: #F9F9F9;
+}
+.cart__payment-methods a img {
+  max-width: 45px;
+}
+.cart__apple-pay {
+  width: 49%;
+}
+.cart__google-pay {
+  width: 49%;
+}
+.cart__checkout a {
+  width: 100%;
+  text-align: center;
+}
+
 .header {
   background: #eb5757;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 3;
+  z-index: 1;
 }
 .header__body {
   padding: 20px;
@@ -495,6 +644,44 @@ section {
   text-align: center;
 }
 
+.donate-laybel {
+  margin: 125px 0 0;
+}
+.donate-laybel::after {
+  content: "";
+  background: url("../img/donate.jpeg") no-repeat 50% 0%/cover;
+}
+.donate-laybel__body {
+  width: 40%;
+  margin: 45px auto 0;
+  text-align: center;
+}
+.donate-laybel__title h2 {
+  font-size: clamp(2.188rem, 1.299rem + 1.85vw, 2.688rem);
+  font-weight: 700;
+}
+.donate-laybel__subtitle h4 {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.donate-form__body {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 3px solid #000;
+  padding: 30px;
+  border-radius: 10px;
+}
+.donate-form__body a {
+  text-align: center;
+  margin: 0 0 20px;
+}
+.donate-form__body a:last-child {
+  margin: 0;
+}
+
 .your-advature {
   margin: 125px 0 0;
 }
@@ -598,6 +785,93 @@ section {
 .need-help__subtitle h3 {
   font-size: clamp(1.125rem, 0.681rem + 0.93vw, 1.375rem);
 }
+.contact-acme {
+  background: #222222;
+  margin: 124px 0 0;
+  position: relative;
+}
+.contact-acme__body {
+  position: relative;
+}
+.contact-acme__title h2 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #F9F9F9;
+  margin: 0 0 10px;
+}
+.contact-acme__colums {
+  display: flex;
+}
+.contact-acme__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 40%;
+  background-image: linear-gradient(to right, #222222, hsla(0, 0%, 13.33%, 0.18) 76%), url("../img/vinicius-amano.jpeg");
+  background-position: 0px 0px, 50% 50%;
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+}
+.contact-acme__colum {
+  width: 27%;
+  padding: 40px;
+  margin: 25px 20px 0 0;
+  text-align: center;
+  background: #fff;
+}
+.contact-acme__colum img {
+  margin: 0 0 clamp(0.625rem, -2.153rem + 5.79vw, 2.188rem);
+}
+.contact-acme__colum h2 {
+  margin: 20px 0 10px;
+  font-weight: 700;
+  font-size: 36px;
+}
+.contact-acme__colum h4 {
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+
+.contact-acme-form__body {
+  display: flex;
+}
+.contact-acme-form__contact-us {
+  width: 30%;
+}
+.contact-acme-form__title {
+  margin: 20px 0 10px;
+  font-weight: 700;
+  font-size: 32px;
+}
+.contact-acme-form__subtitle {
+  margin: 0 0 20px;
+}
+.contact-acme-form__number span {
+  font-weight: 700;
+}
+.contact-acme-form__contact-form {
+  width: 70%;
+  margin: 0 0 0 20px;
+}
+.contact-acme-form__form input {
+  width: 100%;
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 5px;
+}
+.contact-acme-form__form p {
+  margin: 0 0 10px;
+}
+.contact-acme-form__name {
+  margin: 0 0 15px;
+}
+.contact-acme-form__email {
+  margin: 0 0 15px;
+}
+.contact-acme-form__text-area {
+  margin: 0 0 15px;
+}
 @media (max-width: 1200px) {
   [class*=container] {
     max-width: none;
@@ -618,6 +892,14 @@ section {
 @media (max-width: 992px) {
   [class*=container] {
     max-width: none;
+  }
+  .cart__container {
+    width: 60%;
+  }
+  .donate-laybel__body {
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto;
   }
   .products__body {
     flex-wrap: wrap;
@@ -736,6 +1018,38 @@ section {
   .our-advantage__colum {
     min-width: 250px;
   }
+  .contact-acme {
+    padding: 0px 0 124px;
+  }
+  .contact-acme__container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .contact-acme__colums {
+    justify-content: space-between;
+  }
+  .contact-acme__colum {
+    width: 48%;
+    margin: 25px 0 0;
+  }
+  .contact-acme__img {
+    position: static;
+    height: 450px;
+    width: 100%;
+    background-position: 0px 0px, 50% 33%;
+    margin: 0 0 25px;
+  }
+  .contact-acme-form__body {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-acme-form__contact-us {
+    width: 100%;
+  }
+  .contact-acme-form__contact-form {
+    width: 100%;
+    margin: 20px 0 0;
+  }
 }
 @media (max-width: 767px) {
   [class*=container] {
@@ -773,6 +1087,15 @@ section {
   .header__nav {
     width: 100%;
     max-width: none;
+  }
+  .cart__container {
+    width: 100%;
+    max-width: 480px;
+  }
+  .donate-laybel__body {
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
   }
   .shop-merch__body {
     justify-content: end;
@@ -885,6 +1208,7 @@ section {
   }
   .img-text-box__text {
     width: 100%;
+    padding: 0;
   }
   .meet-our-owners__owners {
     flex-direction: column;
@@ -907,6 +1231,23 @@ section {
   }
   .our-advantage__colum:last-child {
     margin: 0;
+  }
+  .contact-acme__container {
+    padding: 0;
+  }
+  .contact-acme__body {
+    padding: 0 15px;
+  }
+  .contact-acme__colums {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .contact-acme__img {
+    height: 350px;
+  }
+  .contact-acme__colum {
+    width: 100%;
+    margin: 25px 0 0;
   }
 }
 @media (max-width: 425px) {

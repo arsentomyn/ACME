@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-:focus, :active {
+button:focus, button:active {
   outline: none;
 }
 
