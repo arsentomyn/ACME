@@ -127,12 +127,13 @@ section {
 }
 .button-dark-outline {
   background: none;
-  color: #F9F9F9;
-  border: 1px solid #FFF;
+  color: #222222;
+  border: 1px solid #222222;
 }
 .button-dark-outline:hover {
-  background: #F9F9F9;
-  color: #222222;
+  background: #222222;
+  color: #F9F9F9;
+  border: 1px solid #F9F9F9;
 }
 .button-prime {
   background: #eb5757;
@@ -463,7 +464,7 @@ section {
   z-index: 1;
 }
 .header__body {
-  padding: 20px;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -872,6 +873,119 @@ section {
 .contact-acme-form__text-area {
   margin: 0 0 15px;
 }
+.shop-our-product-title {
+  margin: 125px 0 0;
+  background: #222222;
+}
+.shop-our-product-title__body h2 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #F9F9F9;
+}
+
+.shop-product-slider__product {
+  position: relative;
+  height: 250px;
+  border-radius: 5px;
+  background: linear-gradient(0deg, rgba(34, 34, 34, 0.9150253852) 4%, rgba(255, 255, 255, 0) 100%);
+  overflow: hidden;
+}
+.shop-product-slider__product:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: url("../img/shop-product-slider.jpeg") no-repeat 50% 50%/cover, rgba(0, 0, 0, 0.2);
+}
+.shop-product-slider__data {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+.shop-product-slider__data span {
+  color: #F9F9F9;
+}
+.shop-product-slider__name {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+.shop-product-slider__const {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.shop-product-slider__buttun {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 5px 20px;
+  background: #F9F9F9;
+  border-radius: 5px;
+}
+.shop-product-slider__buttun a {
+  color: #222222;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.shop-pruducts__body {
+  display: flex;
+}
+.shop-pruducts__sort-by-category {
+  width: 20%;
+}
+.shop-pruducts__sort-by-category-title {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+.shop-pruducts__sort-by-category-title h2 {
+  font-weight: 700;
+}
+.shop-pruducts__categories {
+  display: flex;
+  flex-direction: column;
+  margin: 0 25px 0 0;
+}
+.shop-pruducts__categoty-button {
+  margin: 0 0 10px;
+}
+.shop-pruducts__products {
+  width: 80%;
+  max-width: 100%;
+  display: grid;
+  grid-auto-columns: 1fr;
+  gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+.shop-pruducts__product {
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 0 30px;
+}
+.shop-pruducts__product-img {
+  width: 100%;
+  height: 400px;
+  background: url("../img/coffee.jpeg") no-repeat 50% 50%/cover;
+}
+.shop-pruducts__product-data {
+  margin: 15px 0;
+}
+.shop-pruducts__product-name {
+  font-size: 20px;
+  line-height: 1.5;
+}
+.shop-pruducts__product-cost {
+  line-height: 1.5;
+}
+.shop-pruducts__button a {
+  color: #F9F9F9;
+}
+
 @media (max-width: 1200px) {
   [class*=container] {
     max-width: none;
@@ -895,6 +1009,9 @@ section {
   }
   .cart__container {
     width: 60%;
+  }
+  section {
+    padding: 31px 0;
   }
   .donate-laybel__body {
     justify-content: center;
@@ -1050,6 +1167,27 @@ section {
     width: 100%;
     margin: 20px 0 0;
   }
+  .shop-pruducts__body {
+    display: flex;
+    flex-direction: column;
+  }
+  .shop-pruducts__sort-by-category {
+    width: 100%;
+    text-align: start;
+    margin: 0 0 30px;
+  }
+  .shop-pruducts__products {
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .shop-pruducts__categoty-button {
+    text-align: start;
+  }
+  .shop-pruducts__categories {
+    margin: 0;
+  }
 }
 @media (max-width: 767px) {
   [class*=container] {
@@ -1075,9 +1213,7 @@ section {
   }
   .button {
     display: inline-block;
-    font-size: 14px;
     font-weight: 700;
-    padding: 5px 25px;
     border-radius: 10px;
     line-height: 1.5;
   }
@@ -1248,6 +1384,9 @@ section {
   .contact-acme__colum {
     width: 100%;
     margin: 25px 0 0;
+  }
+  .shop-pruducts__products {
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 425px) {
